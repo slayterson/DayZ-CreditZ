@@ -1,0 +1,53 @@
+Notes: DayZ CreditZ
+
+on player death display information about death after set period of time.
+killed by player, etc. options for how much info about killer etc.
+keep track of guns player kills with on each death
+
+
+Copy CreditZ folder either to the default addons\ folder or anywhere and change the refferences below.
+
+description.ext mission.pbo bottom
+// DayZ CreditZ
+class RscTitles
+{
+titles[] = {"creditz"};
+ 
+class DayZCreditZ {
+  idd = -1;
+  movingEnable = 0;
+  duration = 10;
+  fadein = 2;
+  fadeout = 2;
+  name="creditz";
+ 
+  controls[]={"Picture"};
+ 
+  class Picture {
+    x=0.0; y=0.0; w=1.0; h=1.0;
+    text="addons\CreditZ\DC1.paa";
+    sizeEx = -1;
+    type=0;
+    idc=-1;
+    style=48;
+    colorBackground[]={0,0,0,0};
+    colorText[]={1,1,1,1};
+    font="Bitstream";
+  };
+};
+};
+
+//not needed as i call it later
+/*player_death.sqf from dayz_code to mission.pbo
+
+1 cutRsc ["DeathScreen","BLACK OUT",3];
+to
+1 cutRsc ["creditz","BLACK FADED",10];
+sleep 30;
+1 cutRsc ["creditz","BLACK OUT",10];
+
+*/
+
+init.sqf in mission.pbo bottom
+// DayZ CreditZ
+[] execVM "addons\CreditZ\player_death.sqf"
