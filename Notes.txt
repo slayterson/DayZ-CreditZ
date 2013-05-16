@@ -48,9 +48,11 @@ sleep 30;
 
 */
 
+/*
 init.sqf in mission.pbo bottom
 // DayZ CreditZ
 [] execVM "addons\CreditZ\player_death.sqf"
+*/
 
 compiles.sqf
 	player_death =				compile preprocessFileLineNumbers "addons\CreditZ\player_death.sqf";
