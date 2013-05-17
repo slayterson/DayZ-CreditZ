@@ -121,10 +121,11 @@ _body setVariable["combattimeout", 0, true];
 //["dayzFlies",player] call broadcastRpcCallAll;
 sleep 2;
 
+//DayZ-CreditZ
 1 cutRsc ["creditz","BLACK FADED",10];
 sleep 30;
 1 cutRsc ["Default","BLACK OUT",1];
-1 cutRsc ["DeathScreen","BLACK OUT",3];
+[] execVM "addons\CreditZ\roll.sqf";
 
 
 playMusic "dayz_track_death_1";
