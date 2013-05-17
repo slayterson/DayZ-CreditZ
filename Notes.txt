@@ -24,7 +24,7 @@ class DayZCreditZ {
   controls[]={"Picture"};
  
   class Picture {
-    x=0.0; y=0.0; w=1.0; h=1.0;
+    x=-0.5; y=-0.5; w=2.0; h=2.0;
     text="addons\CreditZ\DC1.paa";
     sizeEx = -1;
     type=0;
