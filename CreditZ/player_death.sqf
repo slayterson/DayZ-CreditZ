@@ -123,6 +123,7 @@ sleep 2;
 
 1 cutRsc ["creditz","BLACK FADED",10];
 sleep 30;
+1 cutRsc ["Default","BLACK OUT",1];
 1 cutRsc ["DeathScreen","BLACK OUT",3];
 
 
