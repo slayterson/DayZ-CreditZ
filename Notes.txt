@@ -37,6 +37,35 @@ class DayZCreditZ {
 };
 };
 
+class creditzTxt
+{
+ access = 0;
+ type = CT_STATIC;
+ idc = -1;
+ style = ST_LEFT;
+ w = 0.1; h = 0.05;
+ font = "TahomaB";
+ sizeEx = 0.04;
+ colorBackground[] = {0,0,0,0};
+ colorText[] = {1,1,1,1};
+ text = "";
+ fixedWidth = 0;
+ shadow = 0;
+ name = "creditztxt";
+};
+class dialog
+{
+  class controls
+  {
+    class Background: RscText
+    {
+     text = 'Test';
+     colorBackground[] = {0,0,0,1};
+     x = 0;   y = 0;   w = 1;   h = 1;
+     colorText[] = {1,1,1,1};
+    };
+  };
+};
 
 compiles.sqf
 	player_death =				compile preprocessFileLineNumbers "addons\CreditZ\player_death.sqf";

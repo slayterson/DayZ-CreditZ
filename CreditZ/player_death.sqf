@@ -122,9 +122,8 @@ _body setVariable["combattimeout", 0, true];
 sleep 2;
 
 //DayZ-CreditZ
-1 cutRsc ["creditz","BLACK FADED",10];
-sleep 30;
-1 cutRsc ["Default","BLACK OUT",1];
+//1 cutRsc ["name player","BLACK FADED",10];
+//sleep 30;
 [] execVM "addons\CreditZ\roll.sqf";
 
 
