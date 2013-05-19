@@ -36,7 +36,11 @@ sleep 5;
 2 cutText["Humanity Level: ",'PLAIN',2];
 sleep 5;*/
 
-/*hintSilent parseText format ["<t size='1.50' font='Bitstream' align='center' color='#CC0000'>%1</t><br/>
+/*_separator1 = parseText "<br />------------------------<br />"; 
+_image = "\ca\ui\textures\aus_flag.paa"; 
+_txt = composeText [ image _image,"Heading Text",_separator1,"Content"]; 
+hintC _txt;*/
+_txt = parseText format ["<t size='1.50' font='Bitstream' align='center' color='#CC0000'>%1</t><br/>
 <t size='1.15' font='Bitstream' align='center' >[%8]</t><br/>
 <t size='1.25' font='Bitstream' align='center' color='#FFDD33'>Survived %7 Days</t><br/><br/>
 <t size='1.15' font='Bitstream' align='left' color='#FFBF00'>Zombies Killed: </t><t size='1.15' font='Bitstream' align='right'>%2</t><br/>
@@ -53,7 +57,10 @@ sleep 5;*/
 	(player getVariable['humanity', 0]),
 	(dayz_skilllevel),
 	(gettext (configFile >> 'CfgVehicles' >> (typeof vehicle player) >> 'displayName'))
-];*/
+];
+hintsilent _txt;
+//1 cutText ["Default","PLAIN",2];
+//1 cutText ["_txt","PLAIN",2];
 
 /*class RscText
 {
@@ -84,7 +91,7 @@ class dialog
   };
 };*/
 
-creditz = parseText format ["<t size='1.50' font='Bitstream' align='center' color='#CC0000'>%1</t><br/>
+/*creditz = 'parseText format ["<t size='1.50' font='Bitstream' align='center' color='#CC0000'>%1</t><br/>
 <t size='1.15' font='Bitstream' align='center' >[%8]</t><br/>
 <t size='1.25' font='Bitstream' align='center' color='#FFDD33'>Survived %7 Days</t><br/><br/>
 <t size='1.15' font='Bitstream' align='left' color='#FFBF00'>Zombies Killed: </t><t size='1.15' font='Bitstream' align='right'>%2</t><br/>
@@ -100,7 +107,7 @@ creditz = parseText format ["<t size='1.50' font='Bitstream' align='center' colo
 	(player getVariable['banditKills', 0]),
 	(player getVariable['humanity', 0]),
 	(dayz_skilllevel),
-	(gettext (configFile >> 'CfgVehicles' >> (typeof vehicle player) >> 'displayName'))
+	(gettext (configFile >> 'CfgVehicles' >> (typeof vehicle player) >> 'displayName'))'
 ];
 
-cutRsc [creditz,"BLACK FADED",10];
+1 cutRsc [creditz,"PLAIN",10];*/
