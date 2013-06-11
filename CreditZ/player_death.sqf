@@ -14,10 +14,10 @@ _playerID =	getPlayerUID player;
 
 _id = [player,20,true,getPosATL player] spawn player_alertZombies;
 
-sleep 0.5;
+sleep 0.1;
 
 player setDamage 1;
-0.1 fadeSound 0;
+0.1 fadeSound 1;
 
 player setVariable ["NORRN_unconscious", false, true];
 player setVariable ["unconsciousTime", 0, true];
@@ -92,10 +92,10 @@ r_player_dead = true;
 "colorCorrections" ppEffectCommit 1;
 
 //Player is Dead!
-3 fadeSound 0;
+//3 fadeSound 0;
 0 cutText ["", "BLACK",10];
 dayz_DeathActioned = true;
-sleep 1;
+sleep 0.1;
 
 TitleText[localize "str_player_12","PLAIN DOWN",5];
 
@@ -119,15 +119,16 @@ if (count _array > 0) then {
 _body setVariable["combattimeout", 0, true];
 
 //["dayzFlies",player] call broadcastRpcCallAll;
-sleep 2;
+sleep .1;
 
 //DayZ-CreditZ
 1 cutRsc ["creditz","BLACK OUT",2];
-sleep 2;
+playsound "endSong";
+sleep .1;
 [] execVM "addons\CreditZ\roll.sqf";
 
 
-playMusic "dayz_track_death_1";
+//playMusic "dayz_track_death_1";
 
 "dynamicBlur" ppEffectAdjust [0]; "dynamicBlur" ppEffectCommit 5;
 "colorCorrections" ppEffectAdjust [1, 1, 0, [1, 1, 1, 0.0], [1, 1, 1, 1],  [1, 1, 1, 1]];"colorCorrections" ppEffectCommit 5;
