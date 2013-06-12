@@ -123,8 +123,9 @@ sleep .1;
 
 //DayZ-CreditZ
 1 cutRsc ["creditz","BLACK OUT",2];
+0.1 fadesound 1;
 playsound "endSong";
-sleep .1;
+sleep 0.1;
 [] execVM "addons\CreditZ\roll.sqf";
 
 
