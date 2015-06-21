@@ -18,6 +18,7 @@ out there to get started.
 
 1) First off edit description.ext in your mission PBO. Add this code:
 
+~~~~java
 // DayZ CreditZ
 class RscTitles
 {
@@ -46,7 +47,7 @@ class creditz {
       };
    };
 };
-
+~~~~
 2) This edit may be different if you have changed this line for another
 script. If this is the case. If you have a class RscTitles already.
 right under it add.
@@ -74,8 +75,9 @@ player_death =				compile preprocessFileLineNumbers "addons\CreditZ\player_death
 This actually completes the install. Now for the customization.
    
 ---===Customize It===---
-First place you may want to look at is this code: in file dc_disp.hpp
-   
+First place you may want to look at is this code.
+
+~~~~java   
 class Picture {
       x=-0.5; y=-0.5; w=2.0; h=2.0;
       text="addons\CreditZ\DC1.paa";
@@ -87,14 +89,14 @@ class Picture {
       colorText[]={1,1,1,1};
       font="Bitstream";
 };
-
+~~~~
 You can place the picture with x= and y=. w= and h= are for the size
 of the image. Also the text="addons\CreditZ\DC1.paa" is where the
 image will be. Please make sure it’s paa, as jpg will not work like this.
 
 Also the file in the CreditZ folder player_death.sqf is the default
 one from the DayZ files, with this edit in it:
-
+~~~~java
 //DayZ-CreditZ
 1 cutRsc ["creditz","BLACK OUT",2];
 sleep 2;
@@ -103,7 +105,7 @@ sleep 2;
 This is instead of the default:
 
 1 cutRsc ["DeathScreen","BLACK OUT",2];
-
+~~~~java
 
 This can be changed how you like, but don’t say I broke it :P
 One last edit, the file roll.sqf actually as all of the code that
