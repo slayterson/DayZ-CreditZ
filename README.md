@@ -19,30 +19,30 @@ out there to get started.
 
 1) First off edit description.ext in your mission PBO. 
 
-Find 
-class RscTitles {
-And add after
+Find   
+class RscTitles {   
+And add after   
+   
+#include "addons\CreditZ\dc_disp.hpp"   
+   
+   
+Next open up compiles.sqf. You will need to find this line:   
+   
+player_death =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_death.sqf";   
+   
+Change it so it matches this line:   
 
-#include "addons\CreditZ\dc_disp.hpp"
+player_death =		 		compile preprocessFileLineNumbers "addons\CreditZ\player_death.sqf";   
+   
+   
+3) There is no step 3 :)   
 
-
-Next open up compiles.sqf. You will need to find this line:
-
-player_death =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_death.sqf";
-
-Change it so it matches this line:
-
-player_death =				compile preprocessFileLineNumbers "addons\CreditZ\player_death.sqf";
-
-
-3) There is no step 3 :)
-
-
+   
 This actually completes the install. Now for the customization.
-
+   
 ---===Customize It===---
 First place you may want to look at is this code: in file dc_disp.hpp
-
+   
 class Picture {
       x=-0.5; y=-0.5; w=2.0; h=2.0;
       text="addons\CreditZ\DC1.paa";
