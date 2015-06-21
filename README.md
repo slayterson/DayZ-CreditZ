@@ -17,41 +17,15 @@ do not know what that is, please google it. :) There are tons of scripts
 out there to get started.
 
 
-1) First off edit description.ext in your mission PBO. Add this code:
+1) First off edit description.ext in your mission PBO. 
 
-// DayZ CreditZ
-class RscTitles
-{
-titles[] = {"creditz"};
- 
-class creditz {
-   idd = -1;
-   movingEnable = 0;
-   duration = 10;
-   fadein = 2;
-   fadeout = 2;
-   name="creditz";
- 
-   controls[]={"Picture"};
- 
-   class Picture {
-      x=-0.5; y=-0.5; w=2.0; h=2.0;
-      text="addons\CreditZ\DC1.paa";
-      sizeEx = -1;
-      type=0;
-      idc=-1;
-      style=48;
-      colorBackground[]={0,0,0,0};
-      colorText[]={1,1,1,1};
-      font="Bitstream";
-      };
-   };
-};
+Find 
+class RscTitles {
+And add after
+
+#include "addons\CreditZ\dc_disp.hpp"
 
 
-2) This edit may be different if you have changed this line for another
-script. If this is the case and you can't figure out how to fix it,
-please contact me.
 Next open up compiles.sqf. You will need to find this line:
 
 player_death =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_death.sqf";
@@ -67,7 +41,7 @@ player_death =				compile preprocessFileLineNumbers "addons\CreditZ\player_death
 This actually completes the install. Now for the customization.
 
 ---===Customize It===---
-First place you may want to look at is this code:
+First place you may want to look at is this code: in file dc_disp.hpp
 
 class Picture {
       x=-0.5; y=-0.5; w=2.0; h=2.0;
