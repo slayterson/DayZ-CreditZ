@@ -1,9 +1,10 @@
-DayZ-CreditZ
-============
+#DayZ-CreditZ
+####============
 
-Credits screen for DayZ.
+#Credits screen for DayZ.
 
----===Description===---
+#---===Description===---
+
 Creates a custom death screen for DayZ. Also has the
 ability to display custom text over the picture that can, and by default 
 does, show player stats on death.
@@ -11,7 +12,8 @@ does, show player stats on death.
 This is going to be a pretty easy one people. There are two edits, and
 some customization. So let's get started.
 
----===Install===---
+#---===Install===---
+
 I will say that a basic understanding of PBO files is required, if you
 do not know what that is, please google it. :) There are tons of scripts
 out there to get started.
