@@ -16,15 +16,43 @@ I will say that a basic understanding of PBO files is required, if you
 do not know what that is, please google it. :) There are tons of scripts
 out there to get started.
 
+1) First off edit description.ext in your mission PBO. Add this code:
 
-1) First off edit description.ext in your mission PBO. 
+// DayZ CreditZ
+class RscTitles
+{
+titles[] = {"creditz"};
+ 
+class creditz {
+   idd = -1;
+   movingEnable = 0;
+   duration = 10;
+   fadein = 2;
+   fadeout = 2;
+   name="creditz";
+ 
+   controls[]={"Picture"};
+ 
+   class Picture {
+      x=-0.5; y=-0.5; w=2.0; h=2.0;
+      text="addons\CreditZ\DC1.paa";
+      sizeEx = -1;
+      type=0;
+      idc=-1;
+      style=48;
+      colorBackground[]={0,0,0,0};
+      colorText[]={1,1,1,1};
+      font="Bitstream";
+      };
+   };
+};
 
-Find   
-class RscTitles {   
-And add after   
-   
+2) This edit may be different if you have changed this line for another
+script. If this is the case. If you have a class RscTitles already.
+right under it add.
+
 #include "addons\CreditZ\dc_disp.hpp"   
-   
+
    
 Next open up compiles.sqf. You will need to find this line:   
    
