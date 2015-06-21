@@ -51,17 +51,22 @@ class creditz {
 script. If this is the case. If you have a class RscTitles already.
 right under it add.
 
+~~~~java
 #include "addons\CreditZ\dc_disp.hpp"   
-
+~~~~
    
 Next open up compiles.sqf. You will need to find this line:   
-   
-player_death =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_death.sqf";   
-   
-Change it so it matches this line:   
 
-player_death =		 		compile preprocessFileLineNumbers "addons\CreditZ\player_death.sqf";   
-   
+~~~~java
+player_death =				compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_death.sqf";
+~~~~
+
+Change it so it matches this line:
+
+~~~~java
+player_death =				compile preprocessFileLineNumbers "addons\CreditZ\player_death.sqf";
+~~~~
+  
    
 3) There is no step 3 :)   
 
